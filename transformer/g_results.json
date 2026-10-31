@@ -1,0 +1,225 @@
+{
+ "attention_layer1_last_position_keelvalur": [
+  [
+   0.09121505171060562,
+   0.06444713473320007,
+   0.14161424338817596,
+   0.20329076051712036,
+   0.07494984567165375,
+   0.11882877349853516,
+   0.11838217079639435,
+   0.1872720569372177
+  ],
+  [
+   0.07717125862836838,
+   0.10121388733386993,
+   0.14545170962810516,
+   0.1508028507232666,
+   0.11681728810071945,
+   0.11916537582874298,
+   0.14553874731063843,
+   0.14383888244628906
+  ],
+  [
+   0.07339872419834137,
+   0.09618917852640152,
+   0.10645869374275208,
+   0.10240321606397629,
+   0.180367574095726,
+   0.14915570616722107,
+   0.16995711624622345,
+   0.1220698431134224
+  ],
+  [
+   0.1115688607096672,
+   0.08188367635011673,
+   0.14770887792110443,
+   0.15534919500350952,
+   0.06522489339113235,
+   0.09546942263841629,
+   0.16109023988246918,
+   0.18170486390590668
+  ]
+ ],
+ "attention_row_sum_max_dev": 1.7881393432617188e-07,
+ "batch_windows": [
+  39,
+  0,
+  1,
+  2
+ ],
+ "checks": [
+  {
+   "detail": "",
+   "name": "the fused-kernel switch is restored after a forward pass",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "input (4, 8, 6) -> H0 (4, 8, 64) -> Hn (4, 8, 64), h_target (4, 64)",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "no NaN in H0, Hn, h_target",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "h_target equals Hn[:, -1, :]",
+   "status": "PASS"
+  },
+  {
+   "detail": "max abs difference 0.00e+00",
+   "name": "module forward equals nn.TransformerEncoder's own forward",
+   "status": "PASS"
+  },
+  {
+   "detail": "embedding 448, per layer 33472 = 16640 + 16576 + 256, two layers 66944, final LayerNorm 128, encoder 67072, total 67520",
+   "name": "parameter counts from the formula equal the module's counts",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "positional encoding is a buffer, not a parameter",
+   "status": "PASS"
+  },
+  {
+   "detail": "max abs difference 6.19e-07",
+   "name": "module output equals the plain numpy encoder (embedding + PE, 2 pre-norm layers, final LayerNorm), eval mode",
+   "status": "PASS"
+  },
+  {
+   "detail": "layers 2, shape per layer (4, 4, 8, 8), max |row sum - 1| = 1.79e-07, min weight 3.65e-02",
+   "name": "attention: every row sums to 1 and all weights are >= 0 (all layers, all heads)",
+   "status": "PASS"
+  },
+  {
+   "detail": "max abs difference 5.87e-08",
+   "name": "module attention weights equal the numpy softmax(Q K^T / sqrt(d_k)) weights",
+   "status": "PASS"
+  },
+  {
+   "detail": "max difference 4.77e-07; permutation [0, 1, 5, 2, 4, 3, 6, 7]",
+   "name": "without PE, permuting the first 7 readings leaves h_target unchanged (max diff < 1e-5)",
+   "status": "PASS"
+  },
+  {
+   "detail": "max difference 0.123",
+   "name": "with PE, the same permutation changes h_target (max diff > 1e-3)",
+   "status": "PASS"
+  },
+  {
+   "detail": "max difference 1.290",
+   "name": "train mode: two forward passes differ (dropout active)",
+   "status": "PASS"
+  },
+  {
+   "detail": "max difference 0.0",
+   "name": "eval mode: two forward passes are identical",
+   "status": "PASS"
+  },
+  {
+   "detail": "28 parameter tensors; None: 0, non-finite: 0",
+   "name": "loss = h_target.sum(): every parameter has a gradient that is not None and finite",
+   "status": "PASS"
+  },
+  {
+   "detail": "tensors with all-zero gradient: none",
+   "name": "loss = h_target . r (fixed random vector): every parameter tensor has a non-zero gradient",
+   "status": "PASS"
+  },
+  {
+   "detail": "device NVIDIA GeForce RTX 3050 6GB Laptop GPU, max abs difference 7.15e-07",
+   "name": "CPU and CUDA outputs agree within 1e-4",
+   "status": "PASS"
+  },
+  {
+   "detail": "max abs difference 5.38e-07",
+   "name": "CUDA output equals the float64 numpy encoder within 1e-5",
+   "status": "PASS"
+  },
+  {
+   "detail": "max abs difference 0.0e+00",
+   "name": "PE(8, 64) from the formula equals encoding/pe_table.npy, and the module buffer is that table",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "window length L = 4: Hn (4, 4, 64) and h_target (4, 64)",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "window length L = 12: Hn (4, 12, 64) and h_target (4, 64)",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "PE for L = 4 equals the first 4 rows of the L = 8 table (positions do not depend on L)",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "Phase F windows are the same windows (well_id and last_input_date match)",
+   "status": "PASS"
+  },
+  {
+   "detail": "h_target (4, 64), z_target (4, 64)",
+   "name": "h_target size equals the GCN z_target size (ready for the late fusion in Phase H)",
+   "status": "PASS"
+  }
+ ],
+ "cuda": {
+  "device": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "fused_kernel_diff_vs_cpu": 0.00027549266815185547,
+  "max_abs_diff": 7.152557373046875e-07,
+  "max_abs_diff_vs_float64": 5.37570818526234e-07
+ },
+ "final_line": "ALL CHECKS PASSED",
+ "hand_check_max_abs_diff": 6.194353403543573e-07,
+ "keelvalur_window": 39,
+ "params": {
+  "expected": {
+   "attention_per_layer": 16640,
+   "embedding": 448,
+   "encoder": 67072,
+   "feed_forward_per_layer": 16576,
+   "final_norm": 128,
+   "layer": 33472,
+   "layers_total": 66944,
+   "norms_per_layer": 256,
+   "total": 67520
+  },
+  "module": {
+   "attention_per_layer": 16640,
+   "embedding": 448,
+   "encoder": 67072,
+   "feed_forward_per_layer": 16576,
+   "final_norm": 128,
+   "layer": 33472,
+   "layers_total": 66944,
+   "norms_per_layer": 256,
+   "total": 67520
+  }
+ },
+ "permutation": {
+  "diff_with_pe": 0.12258780002593994,
+  "diff_without_pe": 4.76837158203125e-07,
+  "order": [
+   0,
+   1,
+   5,
+   2,
+   4,
+   3,
+   6,
+   7
+  ]
+ },
+ "speed": {
+  "batch": 128,
+  "ms_forward": 2.15947500000766,
+  "peak_mib": 11.169921875
+ }
+}

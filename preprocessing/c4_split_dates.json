@@ -1,0 +1,9 @@
+{
+  "gap_samples_total": 840,
+  "quarter_boundaries": true,
+  "rule": "split by TARGET date: train <= train_cutoff < val <= val_cutoff < test",
+  "strict_samples_total": 157,
+  "train_cutoff": "2022-09-30",
+  "val_cutoff": "2023-12-31",
+  "window_length": 8
+}

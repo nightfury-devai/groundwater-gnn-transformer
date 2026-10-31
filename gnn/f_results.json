@@ -1,0 +1,192 @@
+{
+ "A2_self_weight": {
+  "max": 0.23649410347826472,
+  "max_well": "Vedaranyam1",
+  "median": 0.060558414310609154,
+  "min": 0.04493173421701889,
+  "min_well": "Valangiman",
+  "wells_over_50pct_outside": 53
+ },
+ "F1": {
+  "max_date_used_minus_t_days": 0.0,
+  "n_nodes": 53,
+  "n_windows": 840,
+  "observed_per_split": {
+   "test": "53 / 53 / 53",
+   "train": "52 / 52 / 53",
+   "val": "52 / 53 / 53"
+  },
+  "split_counts": {
+   "test": 112,
+   "train": 581,
+   "val": 147
+  },
+  "staleness_quarters_per_split": {
+   "test": "0.00 / 0.00 / 46.67",
+   "train": "0.00 / 0.00 / 37.65",
+   "val": "0.00 / 0.00 / 42.66"
+  },
+  "staleness_scaler": {
+   "mean": 4.659511971948001,
+   "n": 30421,
+   "std": 8.306928360886946
+  },
+  "target_row_max_abs_diff": 1.720596385368367e-07,
+  "wells_without_window": {
+   "Aduthurai": 840,
+   "Ayyampet": 840,
+   "Kodavasal": 840,
+   "Madukkur": 840,
+   "Nagapattinam1": 840,
+   "Tirutturaipoondi": 840,
+   "Tiruvarur": 840,
+   "Tiruvonam": 840,
+   "Vadavur": 840,
+   "Valangiman": 840,
+   "Vedaranyam1": 467
+  }
+ },
+ "a_hat": {
+  "max_asymmetry": 2.7755575615628914e-17,
+  "row_sum_max": 1.094848016101157,
+  "row_sum_min": 0.8053772752813569
+ },
+ "checks": [
+  {
+   "detail": "(840, 53, 8)",
+   "name": "NF shape is (windows, nodes, 8)",
+   "status": "PASS"
+  },
+  {
+   "detail": "0 NaN",
+   "name": "NF has no NaN",
+   "status": "PASS"
+  },
+  {
+   "detail": "max (date used - t) = 0 days",
+   "name": "every reading used has date <= last_input_date",
+   "status": "PASS"
+  },
+  {
+   "detail": "0 differences in 44520 pairs",
+   "name": "independent brute-force search finds the same reading for all window-node pairs",
+   "status": "PASS"
+  },
+  {
+   "detail": "373 unobserved window-node pairs",
+   "name": "unobserved nodes are all-zero (features, staleness, has_reading)",
+   "status": "PASS"
+  },
+  {
+   "detail": "max abs difference 1.72e-07 (float32 storage)",
+   "name": "NF[w, node_idx[w], :6] equals X[w, last position, :]",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "target well is observed with staleness 0 in every window",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "node_idx maps every window's well_id to its position in well_order.json",
+   "status": "PASS"
+  },
+  {
+   "detail": "11 wells",
+   "name": "each well without a window is read from the table (count taken from the files)",
+   "status": "PASS"
+  },
+  {
+   "detail": "(4, 53, 64)",
+   "name": "Z shape is (4, 53, 64) for 4 train windows",
+   "status": "PASS"
+  },
+  {
+   "detail": "(4, 64)",
+   "name": "z_target shape is (4, 64)",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "no NaN in Z",
+   "status": "PASS"
+  },
+  {
+   "detail": "",
+   "name": "z_target equals Z[b, node_idx[b], :]",
+   "status": "PASS"
+  },
+  {
+   "detail": "4736 (expected 4736)",
+   "name": "parameter count = 8*64 + 64 + 64*64 + 64",
+   "status": "PASS"
+  },
+  {
+   "detail": "max abs difference 2.49e-07",
+   "name": "module output equals the plain numpy two-layer calculation (eval mode)",
+   "status": "PASS"
+  },
+  {
+   "detail": "max difference to the float64 file 7.41e-09 (float32 rounding)",
+   "name": "A_hat in the module equals graph/a_hat.npy exactly (float32 copy)",
+   "status": "PASS"
+  },
+  {
+   "detail": "max asymmetry 2.78e-17",
+   "name": "A_hat symmetric",
+   "status": "PASS"
+  },
+  {
+   "detail": "min 0.8054, max 1.0948",
+   "name": "A_hat row sums within [0.80, 1.10]",
+   "status": "PASS"
+  },
+  {
+   "detail": "Keelvalur window 39; nearest Nagapattinam1 (A_hat 0.0984): change 0.0420; farthest Puduchataram (A_hat 8.17e-07): change 1.05e-04",
+   "name": "adding 1.0 to feature 0 of the nearest neighbour changes z_target more than adding it to the farthest well",
+   "status": "PASS"
+  },
+  {
+   "detail": "53 of 53 wells have > 50% outside weight",
+   "name": "A2 self weights computed for every well (information)",
+   "status": "PASS"
+  },
+  {
+   "detail": "max difference 0.292",
+   "name": "train mode: two forward passes differ (dropout active)",
+   "status": "PASS"
+  },
+  {
+   "detail": "max difference 0.0",
+   "name": "eval mode: two forward passes are identical",
+   "status": "PASS"
+  },
+  {
+   "detail": "device NVIDIA GeForce RTX 3050 6GB Laptop GPU, max abs difference 1.79e-07",
+   "name": "CPU and CUDA outputs agree within 1e-4",
+   "status": "PASS"
+  }
+ ],
+ "cuda": {
+  "device": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "max_abs_diff": 1.7881393432617188e-07
+ },
+ "dropout": {
+  "eval_mode_diff": 0.0,
+  "train_mode_diff": 0.29218941926956177
+ },
+ "final_line": "ALL CHECKS PASSED",
+ "hand_check_max_abs_diff": 2.486153162228888e-07,
+ "influence": {
+  "change_farthest": 0.00010450970876263455,
+  "change_nearest": 0.041994910687208176,
+  "farthest": "Puduchataram",
+  "farthest_weight": 8.165603355232686e-07,
+  "nearest": "Nagapattinam1",
+  "nearest_weight": 0.09841972621235205,
+  "well": "Keelvalur",
+  "window": 39
+ },
+ "params": 4736
+}

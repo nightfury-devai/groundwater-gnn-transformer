@@ -1,0 +1,9 @@
+{
+ "fit": "TRAIN windows only, observed nodes only",
+ "mean": 4.659511971948001,
+ "n_train_windows": 581,
+ "n_values": 30421,
+ "std": 8.306928360886946,
+ "std_used": 8.306928360886946,
+ "unit": "quarters (days / 91.25)"
+}

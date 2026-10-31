@@ -1,0 +1,378 @@
+{
+ "order_rule": "ascending well_id, same as c3_windows.py (groupby sort=False on c2_normalised.csv sorted by well_id, date)",
+ "n": 53,
+ "earth_radius_km": 6371.0088,
+ "wells": [
+  {
+   "index": 0,
+   "well_id": "Aduthurai",
+   "lat": 10.98944,
+   "lon": 79.5,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 1,
+   "well_id": "Allankottai",
+   "lat": 10.61667,
+   "lon": 79.4125,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 2,
+   "well_id": "Ayyampet",
+   "lat": 10.88889,
+   "lon": 79.19167,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 3,
+   "well_id": "Icchankottai",
+   "lat": 10.65,
+   "lon": 79.17778,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 4,
+   "well_id": "Icchankottai1",
+   "lat": 10.65,
+   "lon": 79.17778,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 5,
+   "well_id": "Keelvalur",
+   "lat": 10.76667,
+   "lon": 79.73333,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 6,
+   "well_id": "Kodavasal",
+   "lat": 10.81861,
+   "lon": 79.48361,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 7,
+   "well_id": "Kumbakonam1",
+   "lat": 10.975,
+   "lon": 79.39167,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 8,
+   "well_id": "Kuttlam",
+   "lat": 11.07583,
+   "lon": 79.53889,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 9,
+   "well_id": "Lower Anaicut",
+   "lat": 11.125,
+   "lon": 79.45417,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 10,
+   "well_id": "Madukkur",
+   "lat": 10.34167,
+   "lon": 79.39167,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 11,
+   "well_id": "Mannargudi",
+   "lat": 10.68333,
+   "lon": 79.46667,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 12,
+   "well_id": "Mayavaram",
+   "lat": 11.09444,
+   "lon": 79.65556,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 13,
+   "well_id": "Melvastrachavdi",
+   "lat": 10.73472,
+   "lon": 79.10417,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 14,
+   "well_id": "Nagapattinam",
+   "lat": 10.7825,
+   "lon": 79.84306,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 15,
+   "well_id": "Nagapattinam1",
+   "lat": 10.78361,
+   "lon": 79.84,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 16,
+   "well_id": "Nagore",
+   "lat": 10.80111,
+   "lon": 79.84194,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 17,
+   "well_id": "Nannilam",
+   "lat": 10.8875,
+   "lon": 79.6,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 18,
+   "well_id": "Narsinganpettai",
+   "lat": 11.01667,
+   "lon": 79.50556,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 19,
+   "well_id": "Needamangalam",
+   "lat": 10.74583,
+   "lon": 79.47083,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 20,
+   "well_id": "Orathandadu",
+   "lat": 10.62917,
+   "lon": 79.26389,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 21,
+   "well_id": "Pangal",
+   "lat": 10.72083,
+   "lon": 79.64167,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 22,
+   "well_id": "Papanasam",
+   "lat": 10.925,
+   "lon": 79.275,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 23,
+   "well_id": "Paramasivapuram II",
+   "lat": 10.99167,
+   "lon": 79.56806,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 24,
+   "well_id": "Paramasivapuram III",
+   "lat": 10.99139,
+   "lon": 79.56667,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 25,
+   "well_id": "Pattukottai1",
+   "lat": 10.425,
+   "lon": 79.3,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 26,
+   "well_id": "Peralam",
+   "lat": 10.96056,
+   "lon": 79.57333,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 27,
+   "well_id": "Peravurani",
+   "lat": 10.26444,
+   "lon": 79.23556,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 28,
+   "well_id": "Poompuhar",
+   "lat": 11.145,
+   "lon": 79.83972,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 29,
+   "well_id": "Puduchataram",
+   "lat": 10.85417,
+   "lon": 78.95167,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 30,
+   "well_id": "Puttur",
+   "lat": 11.2875,
+   "lon": 79.71667,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 31,
+   "well_id": "Saliyamangalam",
+   "lat": 10.77917,
+   "lon": 79.275,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 32,
+   "well_id": "Sanarpatti1",
+   "lat": 10.71667,
+   "lon": 78.96222,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 33,
+   "well_id": "Sirgazhi1",
+   "lat": 11.23889,
+   "lon": 79.73889,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 34,
+   "well_id": "Surakkottai",
+   "lat": 10.73333,
+   "lon": 79.2,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 35,
+   "well_id": "T Budalur",
+   "lat": 10.76667,
+   "lon": 78.99722,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 36,
+   "well_id": "Thagattur",
+   "lat": 10.40833,
+   "lon": 79.68333,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 37,
+   "well_id": "Thanjavur",
+   "lat": 10.775,
+   "lon": 79.10833,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 38,
+   "well_id": "Thillaivilagam",
+   "lat": 10.37083,
+   "lon": 79.59167,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 39,
+   "well_id": "Thirukadiyur",
+   "lat": 11.06667,
+   "lon": 79.81667,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 40,
+   "well_id": "Thirukarukuvur",
+   "lat": 10.86667,
+   "lon": 79.28333,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 41,
+   "well_id": "Thiruvaiyaru",
+   "lat": 10.89167,
+   "lon": 79.10833,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 42,
+   "well_id": "Tirupanandal",
+   "lat": 11.06667,
+   "lon": 79.46667,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 43,
+   "well_id": "Tirutturaipoondi",
+   "lat": 10.4,
+   "lon": 79.5,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 44,
+   "well_id": "Tiruvarur",
+   "lat": 10.77361,
+   "lon": 79.63444,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 45,
+   "well_id": "Tiruvonam",
+   "lat": 10.50417,
+   "lon": 79.16111,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 46,
+   "well_id": "Tranquebar",
+   "lat": 11.01694,
+   "lon": 79.85139,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 47,
+   "well_id": "Vadavur",
+   "lat": 10.7,
+   "lon": 79.25,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 48,
+   "well_id": "Valangiman",
+   "lat": 10.88333,
+   "lon": 79.3875,
+   "district": "Thiruvarur"
+  },
+  {
+   "index": 49,
+   "well_id": "Vallam",
+   "lat": 10.71833,
+   "lon": 79.0625,
+   "district": "Thanjavur"
+  },
+  {
+   "index": 50,
+   "well_id": "Vedaranyam",
+   "lat": 10.35,
+   "lon": 79.8625,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 51,
+   "well_id": "Vedaranyam1",
+   "lat": 10.35,
+   "lon": 79.8625,
+   "district": "Nagapattinam"
+  },
+  {
+   "index": 52,
+   "well_id": "Velanganni",
+   "lat": 10.68333,
+   "lon": 79.8375,
+   "district": "Nagapattinam"
+  }
+ ]
+}

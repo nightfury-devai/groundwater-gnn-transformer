@@ -1,0 +1,16 @@
+{
+ "adjacency": "A_ij = exp(-d_ij^2 / sigma^2), diagonal = 1 from the kernel, no threshold",
+ "distance_file": "graph/distance_matrix.npy",
+ "earth_radius_km": 6371.0088,
+ "n_nodes": 53,
+ "normalisation": "A_hat = D^(-1/2) A D^(-1/2), D = diag(row sums of A)",
+ "sigma_candidates_km": {
+  "10km": 10.0,
+  "25km": 25.0,
+  "median_offdiag": 49.1370096503666,
+  "std_offdiag": 24.797525437558264
+ },
+ "sigma_km": 24.797525437558264,
+ "sigma_rule": "default: std of off-diagonal pairwise distances (population std)",
+ "well_order_file": "graph/well_order.json"
+}

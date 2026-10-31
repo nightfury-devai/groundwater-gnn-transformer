@@ -1,0 +1,75 @@
+{
+ "E1": {
+  "X_max": 4.158679567907472,
+  "X_min": -2.474080559292488,
+  "X_shape": [
+   840,
+   8,
+   6
+  ],
+  "n_wells": 42,
+  "nan_G_col0": 42,
+  "nan_G_rest": 0,
+  "nan_G_total": 42,
+  "nan_X": 0,
+  "split_counts": {
+   "test": 112,
+   "train": 581,
+   "val": 147
+  },
+  "y_shape": [
+   840
+  ]
+ },
+ "E2": {
+  "hand_entries": [
+   [
+    1,
+    0,
+    0.8414709848078965,
+    0.8414709848078965
+   ],
+   [
+    3,
+    11,
+    0.7574406580936762,
+    0.7574406580936762
+   ],
+   [
+    7,
+    62,
+    0.0009334648669508025,
+    0.0009334648669508025
+   ]
+  ],
+  "pe00": 0.0,
+  "pe01": 1.0,
+  "pe_max": 1.0,
+  "pe_min": -0.9899924966004454,
+  "pe_shape": [
+   8,
+   64
+  ],
+  "rows_distinct": true
+ },
+ "E3": {
+  "cuda": true,
+  "first4_train_idx": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "max_abs_err": 2.4409164378624837e-07,
+  "n_params": 448,
+  "output_shape": [
+   4,
+   8,
+   64
+  ],
+  "torch_error": null,
+  "torch_ok": true,
+  "torch_version": "2.6.0+cu124"
+ },
+ "final_line": "ALL CHECKS PASSED"
+}

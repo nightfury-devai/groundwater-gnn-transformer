@@ -1,0 +1,13 @@
+# Python environment (rebuild from requirements.txt)
+.venv/
+__pycache__/
+*.pyc
+
+# Raw telemetry file: 469 MB, over GitHub's 100 MB per-file limit (not used in the model)
+archive/data_build/raw_telemetry/
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
